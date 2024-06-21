@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Welcome to Tweeter</title>
+</head>
+<body>
+    <h1>Welcome to Tweeter: <%= userinfo.firstName %> <%= userinfo.lastName %></h1>
+    <div class="btn">
+        <a href="/addNewTweet"><button class="button">Add Tweet</button></a>
+        <a href="/logout"><button class="button" id="logout">Logout</button></a>
+    </div>
+    <div class="contenar">
+        <% for( let i = 0; i < tweets.length; i++ ) { %>
+            <div class="tweets">
+                <% if (tweets[i].tweet.length === 0 ) { %>
+                    <p>No tweets yet!</p>
+                <% }else { %>
+                    <h3><%= tweets[i].firstName %> <%= tweets[i].lastName %></h3>
+                    <% for( let j = 0; j < tweets[i].tweet.length; j++ ) { %>
+                     <div class="tweet">
+                        <h2><%= tweets[i].tweet[j].title %></h2>
+                        <p><%= tweets[i].tweet[j].content.slice(0, 80) %>....</p>
+                        <p class="date">At: <%= tweets[i].tweet[j].date.toDateString() %></p>
+                        <a href="/tweet/<%= tweets[i].tweet[j].id %>">Read more</a>
+                     </div>
+                    <% } %>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

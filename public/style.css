@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    width: 80%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container form{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form textarea{
+ height: 20em;
+}
+
+.button{
+    width: 150px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #0e3a11;
+}
+
+.err-mas{
+    font-weight: bold;
+    color: red;
+}
+
+.scss-mas{
+    font-weight: bold;
+    color: green;
+}
+
+#logout{
+    background-color: red;
+    color: white;
+}
+
+#logout:hover{
+    background-color: darkred;
+}
+
+.btn{
+    margin: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.tweets{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+}
+
+.tweet{
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.date {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5px;
+}

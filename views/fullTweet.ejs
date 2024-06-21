@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Welcome to Tweeter</title>
+</head>
+<body>
+    <h1>Welcome to Tweeter: <%= userinfo.firstName %> <%= userinfo.lastName %></h1>
+    <div class="btn">
+        <a href="/updaetTweet/<%= tweet._id %>"><button class="button">Updaet Tweet</button></a>
+        <a href="/delete/<%= tweet._id %>"><button class="button" id="logout">Delete Tweet</button></a>
+    </div>
+    <div class="contenar">
+            <div class="tweets">
+                <a href="/tweet">Back</a>
+                <h3><%= userinfo.firstName %> <%= userinfo.lastName %></h3>
+                 <div class="tweet">
+                    <h2><%= tweet.title %></h2>
+                    <p><%= tweet.content %></p>
+                    <p class="date">At: <%= tweet.date.toDateString() %></p>
+                 </div>
+            </div>
+    </div>
+</body>
+</html>
